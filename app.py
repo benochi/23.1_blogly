@@ -26,10 +26,10 @@ def users():
     users = User.query.order_by(User.last_name, User.first_name).all()
     return render_template("users/index.html", users=users)
 
-@app.route("/users/new")
+@app.route("/users/new", methods=['GET'])
 def new_user_form():
     """shows form for new user input"""
-    return render_template("users/new-user.html")
+    return render_template("users/new.html")
 
 @app.route("/users/new", methods=["POST"])
 def new_users():
