@@ -24,7 +24,7 @@ def home():
 def users():
     """Page of all current users"""
     users = User.query.order_by(User.last_name, User.first_name).all()
-    return render_template("/users/index.html", users=users)
+    return render_template("users/index.html", users=users)
 
 @app.route("/users/new")
 def new_user_form():
