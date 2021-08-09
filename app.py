@@ -62,7 +62,7 @@ def edit_users(user_id):
     return render_template('users/edit.html', user=user)
 
 @app.route("/users/<int:user_id>/edit", methods=["POST"])
-def update_users():
+def update_users(user_id):
     """Handle the form submission for edit_users"""
 
     user = User.query.get_or_404(user_id)
