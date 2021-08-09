@@ -54,7 +54,7 @@ def show_users():
     return render_template('users/show.html', user=user)
 
 @app.route("/users/<int:user_id>/edit")
-def edit_users():
+def edit_users(user_id):
     """Shows the edit page for a user and a cancel button that returns to the detail page for a user, 
     and a save button that updates the user.""" 
 
